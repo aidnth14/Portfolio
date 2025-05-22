@@ -1,0 +1,312 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and general fonts */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(235, 235, 235);
+}
+
+/* Navbar Styling */
+header {
+  background-color: #ececec;
+  padding: 10px 40px;
+  border-bottom: 5px solid #000;
+  border-right: 5px solid #000;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#nav-logo {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#nav-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.categories {
+  display: flex;
+  gap: 30px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #272727;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background 0.2s ease;
+}
+
+.categories a:hover {
+  background-color: #272727;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Sections */
+.section {
+  padding: 40px 20px;
+}
+
+.section-light {
+  background-color: #f9f9f9;
+}
+
+.section-dark {
+  background-color: #333;
+  color: white;
+}
+
+
+/* Specific heights for some sections */
+#about,
+#info {
+  height: 280px;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-side {
+  max-width: 400px;
+}
+
+.img-side img {
+  width: 150px;
+}
+
+/* Services */
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.services-card {
+  width: 150px;
+  height: 200px;
+  background-color: lightgray;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0 rgb(60, 60, 60);
+}
+
+.folder-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.folder-container img {
+  width: 60px;
+}
+
+/* Team Section */
+#team-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.team-box {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.team-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Contact Section */
+.contact-card {
+  width: 200px;
+  height: 250px;
+  background-color: white;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0 rgb(57, 57, 57);
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Fade-in scroll effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== ORIGIN STATION ANIMATION ========== */
+
+#origin-station-animation {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  font-size: 4rem;
+  font-weight: bold;
+  user-select: none;
+  width: max-content;
+  height: 5rem;
+  color: white;
+}
+
+.word {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  transition: opacity 0.8s ease;
+}
+
+.orgin {
+  left: 0;
+  transform: translateX(-150%);
+  opacity: 1;
+}
+
+.station {
+  right: 0;
+  transform: translateX(150%);
+  opacity: 1;
+}
+
+.move-orgin {
+  animation: moveOrgin 2.5s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.move-station {
+  animation: moveStation 2.5s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes moveOrgin {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveStation {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.os-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  gap: 0;
+  opacity: 0;
+  user-select: none;
+  transform: translate(-50%, 0);
+}
+
+.os-letter {
+  display: inline-block;
+  transition: transform 1.5s ease, opacity 0.6s ease;
+}
+
+.os-wrapper.show {
+  opacity: 1;
+}
+
+.os-letter.O.move {
+  animation: moveO 1.5s forwards ease;
+}
+
+.os-letter.S.move {
+  animation: moveS 1.5s forwards ease;
+}
+
+@keyframes moveO {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20px, -20px);
+  }
+}
+
+@keyframes moveS {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}
+
+.illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+  z-index: -1;
+}
+
+.illustration.visible {
+  opacity: 0.6;
+}
+
+/* Hover bounce animation for OS letters */
+@keyframes hoverUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
