@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto Slab", serif;
   background-color: #ebebeb;
   line-height: 1.6;
 }
@@ -168,6 +168,7 @@ header {
   border: 3px solid black;
 }
 
+
 /* FOLDERS */
 .folder-container {
   display: flex;
@@ -202,7 +203,7 @@ h1 {
   display: flex;
   border-right: 3px solid black;
   border-bottom: 3px solid black;
-  background: white;
+  background: #736675;
   box-shadow: 4px 4px 0 rgb(60, 60, 60);
   transition: 0.2s ease-in-out;
 }
@@ -221,14 +222,15 @@ h1 {
 }
 
 .tagfile {
-  color: #000;
+  color: #fff4f7;
 }
 
 .photo-label {
   font-size: 10px;
-  padding: 3px 6px;
+  padding: 3px 20px;
   border-bottom: 1px solid black;
-  background: #f0f0f0;
+  background: #554b56;
+;
 }
 
 .photo {
@@ -240,8 +242,8 @@ h1 {
 }
 
 .photo img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 200px;
+  max-height: 150px;
 }
 
 .info {
@@ -303,7 +305,7 @@ h1 {
   position: relative;
   min-height: 400px;
   overflow: hidden;
-  background-color: #293c40;
+  background-color: #292c2c;
   color: white;
   display: flex;
   justify-content: center;
@@ -459,4 +461,3 @@ h1 {
     display: block;
   }
 }
-
