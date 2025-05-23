@@ -76,7 +76,8 @@ header {
 }
 
 /* ABOUT & INFO */
-#about, #info {
+#about,
+#info {
   min-height: 350px;
 }
 
@@ -111,7 +112,6 @@ header {
   height: 200px;
   background-color: lightgray;
   border: 3px solid black;
-  box-shadow: 4px 4px 0 rgb(60, 60, 60);
 }
 
 /* FOLDERS */
@@ -129,14 +129,15 @@ header {
 
 /* TEAM */
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px; /* Reduced from 30px */
+  gap: 20px;
+  /* Reduced from 30px */
   justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
@@ -148,60 +149,66 @@ h1 {
   border-right: 3px solid black;
   border-bottom: 3px solid black;
   background: white;
-  /* height: 150px; ← REMOVE THIS */
+  box-shadow: 4px 4px 0 rgb(60, 60, 60);
+  transition: 0.2s ease-in-out;
 }
 
 
-    .photo-box {
-      width: 50%;
-      border-right: 2px solid black;
-      display: flex;
-      flex-direction: column;
-    }
+.card:hover {
+  box-shadow: 1px 1px 0 rgb(60, 60, 60);
+  transform: translateY(3px);
+}
 
-    .tagfile{
-      color: #000;
-    }
+.photo-box {
+  width: 50%;
+  border-right: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
 
-    .photo-label {
-      font-size: 10px;
-      padding: 3px 6px;
-      border-bottom: 1px solid black;
-      background: #f0f0f0;
-    }
+.tagfile {
+  color: #000;
+}
 
-    .photo {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px;
-    }
+.photo-label {
+  font-size: 10px;
+  padding: 3px 6px;
+  border-bottom: 1px solid black;
+  background: #f0f0f0;
+}
 
-    .photo img {
-      max-width: 100%;
-      max-height: 100%;
-    }
+.photo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
 
-    .info {
-      width: 50%;
-      padding: 10px;
-      font-size: 13px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.photo img {
+  max-width: 100%;
+  max-height: 100%;
+}
 
-    .info p {
-      margin: 2px 0;
-    }
+.info {
+  width: 50%;
+  padding: 10px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .info b {
-      display: inline-block;
-      width: 80px;
-    }
+.info p {
+  margin: 2px 0;
+}
 
-  
+.info b {
+  display: inline-block;
+  width: 80px;
+}
+
+
 /* CONTACT */
 .center {
   text-align: center;
