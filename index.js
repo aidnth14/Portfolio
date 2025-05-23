@@ -62,3 +62,22 @@ async function animateOriginStation() {
 }
 
 animateOriginStation();
+
+document.getElementById('hamburger-icon').addEventListener('click', function () {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu.style.right === '0px') {
+    mobileMenu.style.right = '-100%'; 
+  } else {
+    mobileMenu.style.right = '0'; 
+  }
+});
+
+document.getElementById('nav-mobile-close').addEventListener('click', function () {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu.style.right === '0px') {
+    mobileMenu.style.right = '-100%'; 
+  } else {
+    mobileMenu.style.right = '0'; 
+  }
+});
+
