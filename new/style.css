@@ -27,6 +27,15 @@ header {
 #nav-logo {
   font-size: 20px;
   flex-shrink: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-bottom: 50px;
 }
 
 #nav-name {
@@ -162,11 +171,26 @@ header {
 }
 
 .services-card {
+  padding: 10px;
   width: 150px;
   height: 200px;
   background-color: lightgray;
   border: 3px solid black;
 }
+
+.serviceimage{
+  width: 135px;
+  height: 100px;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.servicetag{
+  padding-top: 100px;
+  padding-right: 50px;
+  color: #ececec;
+}
+
 
 
 /* FOLDERS */
