@@ -128,28 +128,80 @@ header {
 }
 
 /* TEAM */
-#team-board {
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px; /* Reduced from 30px */
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.team-box {
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding: 15px;
-  border: 2px solid black;
+
+.card {
+  display: flex;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  background: white;
+  /* height: 150px; ← REMOVE THIS */
 }
 
-.team-box img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
+    .photo-box {
+      width: 50%;
+      border-right: 2px solid black;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tagfile{
+      color: #000;
+    }
+
+    .photo-label {
+      font-size: 10px;
+      padding: 3px 6px;
+      border-bottom: 1px solid black;
+      background: #f0f0f0;
+    }
+
+    .photo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+    }
+
+    .photo img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .info {
+      width: 50%;
+      padding: 10px;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info p {
+      margin: 2px 0;
+    }
+
+    .info b {
+      display: inline-block;
+      width: 80px;
+    }
+
+  
 /* CONTACT */
 .center {
   text-align: center;
@@ -188,9 +240,9 @@ header {
 /* ORIGIN STATION ANIMATION */
 #origin-station-animation {
   position: relative;
-  min-height: 350px;
+  min-height: 400px;
   overflow: hidden;
-  background-color: #a53551;
+  background-color: #293c40;
   color: white;
   display: flex;
   justify-content: center;
@@ -306,6 +358,8 @@ header {
 
 .illustration.visible {
   opacity: 0.6;
+  height: 250px;
+  width: 250px;
 }
 
 /* Responsive Layout Fixes */
