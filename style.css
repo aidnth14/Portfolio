@@ -23,8 +23,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  position: relative;
   gap: 20px;
 }
 
@@ -34,6 +33,9 @@ header {
 }
 
 #nav-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 24px;
   font-weight: bold;
   flex-shrink: 0;
@@ -42,8 +44,6 @@ header {
 .categories {
   display: flex;
   gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
 }
 
 .categories a {
