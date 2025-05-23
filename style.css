@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", Arial;
   background-color: #ebebeb;
   line-height: 1.6;
 }
@@ -78,7 +78,7 @@ header {
   box-sizing: border-box;
   width: 60px;
   height: 35px;
-  font-family: Arial;
+  font-family: "Roboto";
   background-color: white;
   color: black;
   border-radius: 5px;
@@ -166,6 +166,10 @@ header {
   height: 200px;
   background-color: lightgray;
   border: 3px solid black;
+}
+
+.services-card img {
+  width: 100%;
 }
 
 
@@ -264,6 +268,14 @@ h1 {
   width: 80px;
 }
 
+.info a {
+  color: white;
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: rgb(238, 162, 162);
+}
 
 /* CONTACT */
 .center {
