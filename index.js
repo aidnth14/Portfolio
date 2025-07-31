@@ -1,73 +1,168 @@
-const faders = document.querySelectorAll('.fade-in');
+document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.classList.add('hidden');
+        }
+    });
 
-const appearOptions = {
-  threshold: 0.3,
-};
+    const fadeInSections = document.querySelectorAll('.fade-in');
 
-const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+    const sectionObserverOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: "0px"
+    };
+
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, sectionObserverOptions);
+
+    fadeInSections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    const originWord = document.querySelector('.orgin');
+    const stationWord = document.querySelector('.station');
+    const osWrapper = document.querySelector('.os-wrapper');
+    const illustration = document.querySelector('.illustration');
+    const osLetterO = document.querySelector('.os-letter.O');
+    const osLetterS = document.querySelector('.os-letter.S');
+
+    if (osWrapper) osWrapper.style.opacity = '0';
+    if (illustration) illustration.style.opacity = '0';
+
+    if (originWord) originWord.classList.add('move-orgin');
+    if (stationWord) stationWord.classList.add('move-station');
+
+    setTimeout(() => {
+        if (originWord) originWord.classList.add('fade-out');
+        if (stationWord) stationWord.classList.add('fade-out');
+
+        setTimeout(() => {
+            if (osWrapper) {
+                osWrapper.classList.add('show');
+                if (osLetterO) osLetterO.classList.add('move');
+                if (osLetterS) osLetterS.classList.add('move');
+            }
+
+            setTimeout(() => {
+                if (illustration) illustration.classList.add('visible');
+            }, 1500);
+        }, 500);
+    }, 2500);
+
+
+    const mobileMenuOpenBtn = document.getElementById('mobile-menu-button');
+    const mobileMenuCloseBtn = document.getElementById('nav-mobile-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const body = document.body;
+
+    if (mobileMenuOpenBtn) {
+        mobileMenuOpenBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            body.classList.add('blurred-background');
+        });
     }
-  });
-}, appearOptions);
 
-faders.forEach((fader) => {
-  appearOnScroll.observe(fader);
-});
+    if (mobileMenuCloseBtn) {
+        mobileMenuCloseBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            body.classList.remove('blurred-background');
+        });
+    }
 
-const orgin = document.querySelector('.orgin');
-const station = document.querySelector('.station');
-const osWrapper = document.querySelector('.os-wrapper');
-const osO = osWrapper.querySelector('.os-letter.O');
-const osS = osWrapper.querySelector('.os-letter.S');
-const illustration = document.querySelector('.illustration');
+    const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            body.classList.remove('blurred-background');
+        });
+    });
 
-async function animateOriginStation() {
-  if (!orgin || !station || !osWrapper || !osO || !osS || !illustration) return;
+    const learnMoreBtn = document.getElementById('about-us-btn');
+    const learnMorePopupOverlay = document.getElementById('about-us-popup-overlay');
+    const popupCloseBtn = document.querySelector('#about-us-popup-overlay .popup-close-btn');
 
-  orgin.classList.add('move-orgin');
-  station.classList.add('move-station');
+    if (learnMoreBtn) {
+        learnMoreBtn.addEventListener('click', () => {
+            learnMorePopupOverlay.classList.add('active');
+            body.classList.add('blurred-background');
+        });
+    }
 
-  await new Promise((r) => setTimeout(r, 1500));
-  orgin.classList.add('fade-out');
-  station.classList.add('fade-out');
+    if (popupCloseBtn) {
+        popupCloseBtn.addEventListener('click', () => {
+            learnMorePopupOverlay.classList.remove('active');
+            body.classList.remove('blurred-background');
+        });
+    }
 
-  await new Promise((r) => setTimeout(r, 900));
-  orgin.remove();
-  station.remove();
+    if (learnMorePopupOverlay) {
+        learnMorePopupOverlay.addEventListener('click', (event) => {
+            if (event.target === learnMorePopupOverlay) {
+                learnMorePopupOverlay.classList.remove('active');
+                body.classList.remove('blurred-background');
+            }
+        });
+    }
 
-  osWrapper.classList.add('show');
-  osO.classList.add('move');
-  osS.classList.add('move');
+    const faqPopupTrigger = document.querySelector('a[href="#faq-popup-trigger"]');
+    const faqPopupTriggerMobile = document.querySelector('a[href="#faq-popup-trigger-mobile"]');
+    const faqSidePopup = document.getElementById('faq-side-popup');
+    const faqCloseBtn = document.querySelector('#faq-side-popup .popup-close-btn-side');
 
-  illustration.classList.add('visible');
+    const projectsPopupTrigger = document.querySelector('a[href="#projects-popup-trigger"]');
+    const projectsPopupTriggerMobile = document.querySelector('a[href="#projects-popup-trigger-mobile"]');
+    const projectsSidePopup = document.getElementById('projects-side-popup');
+    const projectsCloseBtn = document.querySelector('#projects-side-popup .popup-close-btn-side');
 
-  osO.addEventListener('animationend', () => {
-    osO.style.animation = 'hoverUp 2s ease-in-out infinite';
-  });
-  osS.addEventListener('animationend', () => {
-    osS.style.animation = 'hoverUp 2s ease-in-out infinite';
-  });
-}
+    function openSidePopup(popupElement) {
+        popupElement.classList.add('active');
+        body.classList.add('blurred-background');
+    }
 
-animateOriginStation();
+    function closeSidePopup(popupElement) {
+        popupElement.classList.remove('active');
+        body.classList.remove('blurred-background');
+    }
 
-document.getElementById('hamburger-icon').addEventListener('click', function () {
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (mobileMenu.style.right === '0px') {
-    mobileMenu.style.right = '-100%';
-  } else {
-    mobileMenu.style.right = '0';
-  }
-});
+    if (faqPopupTrigger) {
+        faqPopupTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            openSidePopup(faqSidePopup);
+        });
+    }
+    if (faqPopupTriggerMobile) {
+        faqPopupTriggerMobile.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSidePopup(mobileMenu);
+            openSidePopup(faqSidePopup);
+        });
+    }
+    if (faqCloseBtn) {
+        faqCloseBtn.addEventListener('click', () => closeSidePopup(faqSidePopup));
+    }
 
-document.getElementById('nav-mobile-close').addEventListener('click', function () {
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (mobileMenu.style.right === '0px') {
-    mobileMenu.style.right = '-100%';
-  } else {
-    mobileMenu.style.right = '0';
-  }
+    if (projectsPopupTrigger) {
+        projectsPopupTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            openSidePopup(projectsSidePopup);
+        });
+    }
+    if (projectsPopupTriggerMobile) {
+        projectsPopupTriggerMobile.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeSidePopup(mobileMenu);
+            openSidePopup(projectsSidePopup);
+        });
+    }
+    if (projectsCloseBtn) {
+        projectsCloseBtn.addEventListener('click', () => closeSidePopup(projectsSidePopup));
+    }
 });
