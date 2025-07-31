@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OriginStation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="dots-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav id="navbar">
+            <a href="#" id="nav-logo">OriginStation</a>
+            <a href="#" id="nav-name">OriginStation</a>
+            <ul class="categories-big">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#faq-popup-trigger">FAQ</a></li>
+                <li><a href="#projects-popup-trigger">Projects</a></li>
+            </ul>
+            <button class="categories-small" id="mobile-menu-button">&#9776;</button>
+        </nav>
+        <div id="mobile-menu">
+            <button id="nav-mobile-close">X</button>
+            <ul>
+                <li><a href="#about">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#what-are-we">What Are We</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq-popup-trigger-mobile">FAQ</a></li>
+                <li><a href="#projects-popup-trigger-mobile">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="origin-station-animation">
+            <div class="container">
+                <span class="word orgin">Origin</span>
+                <span class="word station">Station</span>
+            </div>
+            <div class="os-wrapper">
+                <span class="os-letter O">O</span>
+                <span class="os-letter S">S</span>
+            </div>
+            <img src="medias/image/isometric.png" alt="Illustration" class="illustration">
+        </section>
+
+        <section id="about" class="section section-light fade-in">
+            <div class="section-content-wrapper">
+                <div class="text-content-side">
+                    <h2>ABOUT US</h2>
+                    <p>We are a collective bound by purpose and grace, devoted to fostering profound connections. Guided by integrity and vision, we craft experiences that inspire enduring trust. Rooted in timeless values, we honor tradition while embracing a future of promise and awe.</p>
+                    <button class="learn-more-btn" id="about-us-btn">Learn More</button>
+                </div>
+                <div class="image-display-side">
+                    <img src="medias/image/macicon.png" alt="About Us Illustration">
+                </div>
+            </div>
+        </section>
+
+        <section id="what-are-we" class="section section-dark fade-in">
+            <div class="section-content-wrapper">
+                <div class="text-content-side">
+                    <h2>WHAT ARE WE</h2>
+                    <p>We are innovators, creators, and problem-solvers. Our mission is to transform complex challenges into elegant solutions, empowering businesses and individuals to thrive in a dynamic world. We build, we design, we support, and we lead with passion.</p>
+                </div>
+                <div class="image-display-side">
+                    <img src="medias/image/Tv.png" alt="What Are We Illustration">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section section-light fade-in">
+            <h1 class="service-slogan">SERVICES</h1>
+            <div class="new-services-container">
+                <div class="service-details-card">
+                    <div class="service-icon">
+                        <img src="https://placehold.co/35x35/e0f2f7/000000?text=PM" alt="Project Management Icon">
+                    </div>
+                    <h2>Project Management</h2>
+                    <p>Streamline your projects with our expert management. From planning to execution, we ensure timely delivery and exceptional quality.</p>
+                    <span class="options-available">3 Options Available</span>
+                </div>
+                <div class="service-item-card">
+                    <div class="service-icon">
+                        <img src="https://placehold.co/35x35/e0f2f7/000000?text=WD" alt="Web Development Icon">
+                    </div>
+                    <h2>Web Development</h2>
+                    <p>Crafting responsive and dynamic websites tailored to your business needs.</p>
+                </div>
+                <div class="service-item-card">
+                    <div class="service-icon">
+                        <img src="https://placehold.co/35x35/e0f2f7/000000?text=MD" alt="Mobile Development Icon">
+                    </div>
+                    <h2>Mobile Development</h2>
+                    <p>Building intuitive and high-performance mobile applications for iOS and Android.</p>
+                </div>
+                <div class="service-more-card">
+                    <span>+4</span>
+                    <span>More</span>
+                    <p>Discover our full range of services designed to elevate your business.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section section-dark fade-in">
+            <h1>ARCHITECTS OF innovation</h1>
+            <div class="team-content-wrapper">
+                <div class="ceo-section">
+                    <div class="ceo-image">
+                        <img src="https://placehold.co/200x200/e0e0e0/333333?text=CEO+Image" alt="CEO Image">
+                    </div>
+                    <div class="ceo-card">
+                        <h3>PETER LONGMAN</h3>
+                        <p class="ceo-role">CEO & FOUNDER</p>
+                        <p class="ceo-description">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.</p>
+                        <div class="team-social-icons">
+                            <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                            <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                            <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card-new">
+                        <div class="image-side">
+                            <img src="https://placehold.co/200x200/e0e0e0/333333?text=Joan+Martinez" alt="Joan Martinez">
+                        </div>
+                        <div class="text-side">
+                            <h4>JOAN MARTINEZ</h4>
+                            <p class="team-member-role-new">PROJECT MANAGER</p>
+                            <p class="team-member-description-new">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                            <div class="team-social-icons">
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card-new blue-background">
+                        <div class="image-side">
+                            <img src="https://placehold.co/200x200/e0e0e0/333333?text=Michael+Doe" alt="Michael Doe">
+                        </div>
+                        <div class="text-side">
+                            <h4>MICHAEL DOE</h4>
+                            <p class="team-member-role-new">UI/UX DESIGNER</p>
+                            <p class="team-member-description-new">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                            <div class="team-social-icons">
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card-new">
+                        <div class="image-side">
+                            <img src="https://placehold.co/200x200/e0e0e0/333333?text=Saul+Goodman" alt="Saul Goodman">
+                        </div>
+                        <div class="text-side">
+                            <h4>SAUL GOODMAN</h4>
+                            <p class="team-member-role-new">LEAD DEVELOPER</p>
+                            <p class="team-member-description-new">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                            <div class="team-social-icons">
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card-new blue-background">
+                        <div class="image-side">
+                            <img src="https://placehold.co/200x200/e0e0e0/333333?text=Laurence+White" alt="Laurence White">
+                        </div>
+                        <div class="text-side">
+                            <h4>LAURENCE WHITE</h4>
+                            <p class="team-member-role-new">CONTENT STRATEGIST</p>
+                            <p class="team-member-description-new">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                            <div class="team-social-icons">
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card-new">
+                        <div class="image-side">
+                            <img src="https://placehold.co/200x200/e0e0e0/333333?text=Emily+Black" alt="Emily Black">
+                        </div>
+                        <div class="text-side">
+                            <h4>EMILY BLACK</h4>
+                            <p class="team-member-role-new">CUSTOMER SUPPORT LEAD</p>
+                            <p class="team-member-description-new">Ensures customer satisfaction with excellent problem-solving skills.</p>
+                            <div class="team-social-icons">
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card-new blue-background">
+                        <div class="image-side">
+                            <img src="https://placehold.co/200x200/e0e0e0/333333?text=Olivia+Black" alt="Olivia Black">
+                        </div>
+                        <div class="text-side">
+                            <h4>OLIVIA BLACK</h4>
+                            <p class="team-member-role-new">DATA SCIENTIST</p>
+                            <p class="team-member-description-new">Analyzes complex datasets to provide actionable insights.</p>
+                            <div class="team-social-icons">
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=F" alt="Facebook"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=T" alt="Twitter"></a>
+                                <a href="#" class="social-icon-allston"><img src="https://placehold.co/16x16/cccccc/000000?text=L" alt="LinkedIn"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-light fade-in">
+            <h2 class="center">CONTACT US</h2>
+            <div class="contact-image-card-container">
+                <div class="contact-info-card">
+                    <h3>Get in Touch</h3>
+                    <p>Email: <a href="mailto:info@originstation.com">info@originstation.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                    <p>Address: 123 Innovation Drive, Tech City, TX 78701</p>
+                </div>
+                <div class="contact-visual-side">
+                    <img src="medias/image/macicon.png" alt="Contact Image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">OriginStation</div>
+                <div class="footer-slogan">Innovating for a better tomorrow.</div>
+            </div>
+            <div class="footer-links">
+                <ul class="footer-column">
+                    <li><a href="#about">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#what-are-we">What Are We</a></li>
+                </ul>
+                <ul class="footer-column">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="footer-column">
+                    <li><a href="#faq-popup-trigger">FAQ</a></li>
+                    <li><a href="#projects-popup-trigger">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#" class="social-icon"><img src="medias/image/facebook.jpeg" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="medias/image/insta.jpeg" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="medias/image/x.jpeg" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="medias/image/linkdin.jpeg" alt="LinkedIn"></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 OriginStation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup-overlay" id="about-us-popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close-btn">&times;</button>
+            <h2>About Us</h2>
+            <p>OriginStation is dedicated to pushing the boundaries of technology and design. We believe in creating solutions that are not only innovative but also deeply connected to human needs. Our team is a blend of diverse talents, united by a common goal: to build a future where technology serves humanity with integrity and purpose.</p>
+            <p>Our commitment extends beyond just delivering projects; we strive to build lasting relationships with our clients, understanding their vision and translating it into tangible, impactful results. We are constantly evolving, learning, and adapting to the ever-changing digital landscape to ensure we remain at the forefront of innovation.</p>
+        </div>
+    </div>
+
+    <div class="side-popup left-slide" id="faq-side-popup">
+        <div class="popup-header">
+            <img src="https://placehold.co/80x80/f0f0f0/333333?text=FAQ" alt="FAQ Icon" class="popup-cover-image">
+            <h2>Frequently Asked Questions</h2>
+            <button class="popup-close-btn-side">&times;</button>
+        </div>
+        <div class="popup-content-scrollable">
+            <h3>What services do you offer?</h3>
+            <p>We offer a wide range of services including Project Management, Web Development, Mobile Development, Customer Support, Data Science, and Content Strategy. Our goal is to provide comprehensive solutions for your business needs.</p>
+
+            <h3>How can I get a quote for a project?</h3>
+            <p>You can request a quote by visiting our Contact Us section and filling out the inquiry form, or by directly emailing us at info@originstation.com. We aim to respond within 24-48 hours.</p>
+
+            <h3>Do you work with startups?</h3>
+            <p>Yes, we love working with startups! We offer tailored solutions and flexible engagement models to help new businesses establish their digital presence and grow.</p>
+
+            <h3>What is your development process?</h3>
+            <p>Our development process typically involves discovery and planning, design, development, testing, deployment, and ongoing support. We prioritize clear communication and collaboration with our clients at every stage.</p>
+
+            <h3>Can you help with existing projects?</h3>
+            <p>Absolutely. Whether you need enhancements, bug fixes, or a complete overhaul of an existing project, our team can step in to provide support and expertise.</p>
+
+            <h3>What technologies do you specialize in?</h3>
+            <p>Our team is proficient in a variety of modern technologies and frameworks, including but not limited to React, Node.js, Python, various cloud platforms (AWS, Google Cloud), and mobile development frameworks like React Native and Flutter.</p>
+
+            <h3>How do you ensure data security?</h3>
+            <p>Data security is paramount. We implement industry best practices, including encryption, secure coding standards, regular security audits, and compliance with relevant data protection regulations, to ensure your data is safe.</p>
+
+            <h3>What is your approach to customer support?</h3>
+            <p>We believe in proactive and responsive customer support. Our dedicated support team is available to address your queries and provide assistance, ensuring a smooth and satisfactory experience throughout our partnership.</p>
+        </div>
+    </div>
+
+    <div class="side-popup right-slide" id="projects-side-popup">
+        <div class="popup-header">
+            <img src="https://placehold.co/80x80/f0f0f0/333333?text=Projects" alt="Projects Icon" class="popup-cover-image">
+            <h2>Our Projects</h2>
+            <button class="popup-close-btn-side">&times;</button>
+        </div>
+        <div class="popup-content-scrollable">
+            <h3>Project Alpha: E-commerce Platform</h3>
+            <p>Developed a scalable e-commerce solution for a fashion retailer, featuring custom product catalogs, secure payment gateways, and intuitive user experience. Achieved a 30% increase in online sales within the first quarter post-launch.</p>
+
+            <h3>Project Beta: Mobile Fitness App</h3>
+            <p>Designed and built a cross-platform mobile application for fitness tracking, including personalized workout plans, progress monitoring, and social sharing features. Engaged over 50,000 active users in its first six months.</p>
+
+            <h3>Project Gamma: AI-Powered Analytics Dashboard</h3>
+            <p>Created an advanced analytics dashboard integrated with AI for a logistics company, providing real-time insights into supply chain efficiency and predictive maintenance. Led to a 15% reduction in operational costs.</p>
+
+            <h3>Project Delta: Corporate Intranet Portal</h3>
+            <p>Implemented a secure and user-friendly intranet portal for a large corporation, enhancing internal communication, document management, and employee collaboration across various departments.</p>
+
+            <h3>Project Epsilon: Interactive Educational Game</h3>
+            <p>Developed an engaging educational game for children, focusing on STEM concepts. The game features interactive puzzles, animated characters, and a reward system to encourage learning.</p>
+
+            <h3>Project Zeta: Cloud Migration for SaaS</h3>
+            <p>Successfully migrated a legacy SaaS application to a modern cloud infrastructure, significantly improving performance, scalability, and reducing hosting costs by 25%.</p>
+
+            <h3>Project Eta: Blockchain-based Supply Chain Tracker</h3>
+            <p>Explored and prototyped a blockchain solution for transparent and immutable tracking of goods in a complex supply chain, aiming to enhance trust and reduce fraud.</p>
+
+            <h3>Project Theta: Virtual Reality Training Simulator</h3>
+            <p>Created a VR training simulator for industrial safety procedures, offering an immersive and safe environment for employees to practice critical operations and emergency responses.</p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
